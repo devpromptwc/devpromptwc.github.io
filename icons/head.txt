@@ -1,0 +1,34 @@
+<!--ICONS-->
+<link rel="shortcut icon" href="/icons/favicon.ico" />
+<link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+
+<!--PWA-->
+<link rel="manifest" href="https://devprompt.github.io/manifest.json" />
+<link re=""
+
+<!--SEO-->
+<meta name="language" content="pt-BR">
+<meta name="distribution" content="global">
+<meta name="description" content="DevPrompt: tutoriais, automações e produtividade para desenvolvedores modernos." />
+<meta name="keywords" content="DevPrompt, blog para devs, HTML, CSS, JS, Linux, front-end, automação, produtividade, IA" />
+<meta name="author" content="Waltemar Carneiro" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://devprompt.blogspot.com/" />
+
+<!-- PERFORMANCE: preload da fonte Onest local -->
+<link rel="preload" as="font" type="font/woff2" href="https://waltemar.com.br/devprompt/fonts/onest-regular.woff2" crossorigin="anonymous">
+
+<!-- GOOGLE SEARCH ESSENCIALS -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Waltemar, DevPrompt">
+<meta name="copyright" content="DevPrompt © 2025">
+
+<!-- Open Graph (Facebook, LinkedIn etc) -->
+<meta property="og:title" content="DevPrompt – Dicas, Desenvolvimento e Automatização">
+<meta property="og:description" content="Tutoriais práticos e conteúdo profissional sobre desenvolvimento web, automações e produtividade.">
+<meta property="og:url" content="https://devprompt.blogspot.com">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://waltemar.com.br/devprompt/images/devprompt-og.jpg">
