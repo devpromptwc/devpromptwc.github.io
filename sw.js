@@ -2,8 +2,8 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open('app-cache').then(cache =>
       cache.addAll([
-        '/',
-        '/index.html'
+        'https://devprompt.blogspot.com/',
+        'https://devprompt.blogspot.com/index.html'
       ])
     )
   );
