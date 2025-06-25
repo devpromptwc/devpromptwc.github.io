@@ -1,13 +1,5 @@
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('https://devpromptwc.github.io/sw.js').then(function(registration) {
-    console.log('Service Worker registrado com sucesso:', registration);
-  }).catch(function(error) {
-    console.log('Falha ao registrar o Service Worker:', error);
-  });
+  navigator.serviceWorker.register('https://devpromptwc.github.io/devpromptwc/sw.js')
+    .then(reg => console.log('Service Worker registrado!', reg))
+    .catch(err => console.error('Erro ao registrar o Service Worker', err));
 }
-
-// Adiciona o manifesto ao documento
-let link = document.createElement('link');
-link.rel = 'manifest';
-link.href = 'https://devpromptwc.github.io/manifest.json';
-document.head.appendChild(link);
