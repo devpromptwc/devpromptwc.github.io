@@ -9,5 +9,5 @@ if ('serviceWorker' in navigator) {
 // Adiciona o manifesto ao documento
 let link = document.createElement('link');
 link.rel = 'manifest';
-link.href = 'https://devpromptwc.io/manifest.json';
+link.href = 'https://devpromptwc.github.io/manifest.json';
 document.head.appendChild(link);
