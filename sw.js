@@ -1,31 +1,27 @@
-const CACHE_NAME = 'app-cache-v2'; // <--- Mude SEMPRE que fizer alterações
+//Esse sw.js que tá no Starter Kit é o mais básico e limpo possível — é só o esqueleto funcional pra garantir que o navegador reconheça o PWA como válido e permitia a instalação.
+
+/*O que faz:
+Instala normalmente (self.skipWaiting() garante que o novo SW assuma imediatamente).
+Ativa e assume controle (self.clients.claim() cuida das abas abertas)
+
+Fetch handler vazio, ou seja:
+
+Deixa o navegador cuidar de tudo por padrão
+
+Não cacheia nada
+
+Não responde offline*/
 
 self.addEventListener('install', event => {
-  self.skipWaiting(); // Ativa na hora
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache =>
-      cache.addAll([
-        'https://devprompt.blogspot.com/',
-        'https://devprompt.blogspot.com/index.html'
-      ])
-    )
-  );
+  console.log('[SW] Instalando...');
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
-      )
-    ).then(() => self.clients.claim()) // Garante controle imediato
-  );
+  console.log('[SW] Ativado');
+  return self.clients.claim();
 });
 
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response =>
-      response || fetch(event.request)
-    )
-  );
+  // Simples: deixar o navegador lidar com tudo por enquanto
 });
